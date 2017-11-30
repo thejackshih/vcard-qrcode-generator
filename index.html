@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./node_modules/photonkit/dist/css/photon.css">
+    <title>vCard-QRCode-Generator</title>
+  </head>
+  <body>
+    <div class="window">
+      <div class="window-content">
+        <div class="padded-more">
+          <div class="form-group" style="width:500px;" hidden>
+            <label>員工代碼</label>
+            <input class="form-control" type="text" id="code" disabled />
+          </div>
+          <div class="form-group">
+            <label>姓</label>
+            <input class="form-control" type="text" id="lastName" value="" />
+          </div>
+          <div class="form-group">
+            <label>名</label>
+            <input class="form-control" type="text" id="name" value="" />
+          </div>
+          <div class="form-group">
+            <label>公司名稱</label>
+            <input class="form-control" type="text" id="org" value="" />
+          </div>
+          <div class="form-group">
+            <label>部門名稱</label>
+            <input class="form-control" type="text" id="department" value="" />
+          </div>
+          <div class="form-group">
+            <label>國家</label>
+            <input class="form-control" type="text" id="country" value="" />
+          </div>
+          <div class="form-group">
+            <label>郵遞區號</label>
+            <input class="form-control" type="text" id="postalCode" value="" />
+          </div>
+          <div class="form-group">
+            <label>縣市</label>
+            <input class="form-control" type="text" id="region" value="" />
+          </div>
+          <div class="form-group">
+            <label>區</label>
+            <input class="form-control" type="text" id="locality" value="" />
+          </div>
+          <div class="form-group">
+            <label>路</label>
+            <input class="form-control" type="text" id="street" value="" />
+          </div>
+          <div class="form-group">
+            <label>路2</label>
+            <input class="form-control" type="text" id="extAddress" value="" />
+          </div>
+          <div class="form-group">
+            <label>職位</label>
+            <input class="form-control" type="text" id="title" value="" />
+          </div>
+          <div class="form-group">
+            <label>電話</label>
+            <input class="form-control" type="text" id="phone" value="" />
+          </div>
+          <div class="form-group">
+            <label>傳真</label>
+            <input class="form-control" type="text" id="fax" value="" />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input class="form-control" type="text" id="email" value="" />
+          </div>
+          <div class="form-group">
+            <label>公司網址</label>
+            <input class="form-control" type="text" id="website" value="" />
+          </div>
+          <div class="form-group">
+            <label>顏色</label>
+            <input class="form-control" type="text" id="color" value="#000000" />
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="showLogo">LOGO 
+            </label>
+          </div>
+          <input type="file" id="files" />
+          <br />
+          <img id="logo" src="" width="200px" height="200px"/>
+          <br />
+          <img id="image" width="200px" height="200px"></img>
+          <br />
+          <button class="btn btn-large btn-primary" onClick="generateQRCode();">Generate</button>
+        </div>
+      </div>
+    </div>
+    <script src="./window.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "name": "vcard-qrcode-generator",
+    "version": "0.1.0",
+    "main": "main.js",
+    "dependencies": {
+        "photonkit": "^0.1.2",
+        "qrcode": "^1.0.0"
+    },
+    "devDependencies": {
+        "electron": "1.7.9"
+    }
+}
