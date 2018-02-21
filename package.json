@@ -2,6 +2,16 @@
     "name": "vcard-qrcode-generator",
     "version": "0.1.0",
     "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "repository": "https://github.com/randomdize/vcard-qrcode-generator",
+    "license": "MIT",
+    "author": {
+        "name": "Jack Shih",
+        "email": "randomdize@gmail.com",
+        "url": "https://randomdize.github.io/"
+    },
     "dependencies": {
         "photonkit": "^0.1.2",
         "qrcode": "^1.0.0"
