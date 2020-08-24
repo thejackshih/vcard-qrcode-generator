@@ -6,7 +6,13 @@ const QRCode = require('qrcode')
 let win
 
 function createWindow(){
-    win = new BrowserWindow({width: 300, height: 600})
+    win = new BrowserWindow({
+	    width: 300, 
+	    height: 600,
+	    webPreferences: {
+	    	nodeIntegration: true
+	    }
+    })
     
     //win.webContents.openDevTools()
     

@@ -13,10 +13,10 @@
         "url": "https://randomdize.github.io/"
     },
     "dependencies": {
-        "photonkit": "^0.1.2",
-        "qrcode": "^1.0.0"
+        "photonkit": ">=0.1.2",
+        "qrcode": ">=1.0.0"
     },
     "devDependencies": {
-        "electron": "^1.8.2"
+        "electron": "^9.2.1"
     }
 }
