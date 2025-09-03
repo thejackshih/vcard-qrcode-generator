@@ -1,7 +1,5 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
-const url = require('url')
-const QRCode = require('qrcode')
 
 let win
 
@@ -10,17 +8,16 @@ function createWindow(){
 	    width: 300, 
 	    height: 600,
 	    webPreferences: {
-	    	nodeIntegration: true
+            preload: path.join(__dirname, 'preload.js'),
+            nodeIntegration: false,
+            contextIsolation: true,
+            sandbox: false
 	    }
     })
     
     //win.webContents.openDevTools()
     
-    win.loadURL(url.format({
-        pathname: path.join(__dirname, 'index.html'),
-        protocol: 'file:',
-        slashed: true
-    }))
+    win.loadFile('index.html')
 
     win.on('closed', () => {
         win = null
@@ -40,3 +37,4 @@ app.on('activate', () => {
         createWindow()
     }
 })
+

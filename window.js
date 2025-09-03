@@ -1,4 +1,3 @@
-var QRCode = require('qrcode')
 var image = document.getElementById('image')
 var logo = document.getElementById('logo')
 
@@ -54,7 +53,7 @@ let generateQRCodeString = function() {
     if(fax) {
         result += "TEL;TYPE=FAX:" + fax + "\n"
     }
-    result += "ADR;TYPE=WORK:;"
+    result += "ADR;TYPE=WORK:;";
     if(extAddress) {
         result += extAddress
     }
@@ -89,17 +88,23 @@ let generateQRCodeString = function() {
     console.log(result)
     return result
 }
-let generateQRCode = function() {
-    QRCode.toCanvas(generateQRCodeString(), {margin:0, scale: 20, color: {dark: color.value, light: "#ffffff" }, errorCorrectionLevel: 'H' }, function (error, canvas) {
-        if (error) console.error(error) 
-        if(showLogo && showLogo.checked) {
-            var ctx = canvas.getContext('2d')
-            console.log(canvas.width);
-            console.log(canvas.height);
-            ctx.drawImage(logo,canvas.width/2 - 250*1.13, canvas.width/2 - 250, 500*1.13, 500);
-        }
-        image.src = canvas.toDataURL("image/png")
-    })
+
+let generateQRCode = async function() {
+    const text = generateQRCodeString();
+    const options = {
+        margin: 0,
+        scale: 20,
+        color: { dark: color.value, light: "#ffffff" },
+        errorCorrectionLevel: 'H'
+    };
+
+    try {
+        // The 'showLogo' feature has been disabled to accommodate the new secure architecture.
+        // The previous method required direct canvas access which is no longer available in the sandboxed renderer.
+        image.src = await window.electronAPI.generateQR(text, options);
+    } catch (err) {
+        console.error(err);
+    }
 }
 
 
