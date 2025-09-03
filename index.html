@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./node_modules/photonkit/dist/css/photon.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>vCard-QRCode-Generator</title>
   </head>
   <body>
-    <div class="window">
-      <div class="window-content">
-        <div class="padded-more">
-          <div class="form-group" style="width:500px;" hidden>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group" hidden>
             <label>員工代碼</label>
             <input class="form-control" type="text" id="code" disabled />
           </div>
@@ -77,18 +77,13 @@
             <label>顏色</label>
             <input class="form-control" type="text" id="color" value="#000000" />
           </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" id="showLogo">LOGO 
-            </label>
-          </div>
-          <input type="file" id="files" />
           <br />
-          <img id="logo" src="" width="200px" height="200px"/>
+          <button class="btn btn-primary" onClick="generateQRCode();">Generate</button>
+        </div>
+        <div class="col-md-6">
+          <img id="logo" src="" class="img-fluid" />
           <br />
-          <img id="image" width="200px" height="200px"></img>
-          <br />
-          <button class="btn btn-large btn-primary" onClick="generateQRCode();">Generate</button>
+          <img id="image" class="img-fluid"></img>
         </div>
       </div>
     </div>
