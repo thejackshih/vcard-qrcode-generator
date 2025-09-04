@@ -35,7 +35,7 @@ let generateQRCodeString = function() {
     let postalCode = document.getElementById('postalCode').value
     let country = document.getElementById('country').value
 
-    let showLogo = document.getElementById('showLogo').value    
+    // let showLogo = document.getElementById('showLogo').value    
 
     var result = "BEGIN:VCARD\nVERSION:3.0\n"
     if(name && lastName) {
@@ -108,15 +108,15 @@ let generateQRCode = async function() {
 }
 
 
-let fileHandler = function(evt) {
-    var files = evt.target.files;
-    var f = files[0];
-    var reader = new FileReader();
-    reader.onload = (function(theFile) {
-        return function(e) {
-            logo.src = e.target.result;
-        };
-    })(f);
-    reader.readAsDataURL(f);
-}
-document.getElementById('files').addEventListener('change', fileHandler, false);
+// let fileHandler = function(evt) {
+//     var files = evt.target.files;
+//     var f = files[0];
+//     var reader = new FileReader();
+//     reader.onload = (function(theFile) {
+//         return function(e) {
+//             logo.src = e.target.result;
+//         };
+//     })(f);
+//     reader.readAsDataURL(f);
+// }
+// document.getElementById('files').addEventListener('change', fileHandler, false);

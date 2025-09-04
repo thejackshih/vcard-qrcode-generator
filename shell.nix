@@ -1,24 +1,16 @@
 # This shell provides a development environment for the vcard-qrcode-generator project.
 # To use it, run 'nix-shell' in the project root.
 
-with import <nixpkgs> {};
+{ pkgs? import (fetchTarball "https://github.com/nixos/nixpkgs/archive/e040850a7d346e2604a9cbd68208d6818c033334.tar.gz") {}}:
 
-let
-  # Use the latest stable Node.js available in nixpkgs.
-  nodejs = pkgs.nodejs;
-
-  # Use the latest stable Electron available in nixpkgs.
-  electron = pkgs.electron;
-
-in
 pkgs.mkShell {
   # The build inputs are the packages available in the shell.
   buildInputs = [
     # Node.js and npm
-    nodejs
+    pkgs.nodejs
 
     # System libraries required by Electron.
-    electron
+    pkgs.electron
 
     # Common tools for building native Node modules, just in case.
     pkgs.python3
