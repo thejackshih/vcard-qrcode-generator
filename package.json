@@ -17,6 +17,6 @@
         "qrcode": ">=1.0.0"
     },
     "devDependencies": {
-        "electron": "^37.4.0"
+        "electron": "^39.8.4"
     }
 }
