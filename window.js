@@ -107,6 +107,8 @@ let generateQRCode = async function() {
     }
 }
 
+document.getElementById('generateBtn').addEventListener('click', generateQRCode);
+
 
 // let fileHandler = function(evt) {
 //     var files = evt.target.files;

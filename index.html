@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>vCard-QRCode-Generator</title>
   </head>
@@ -78,7 +79,7 @@
             <input class="form-control" type="text" id="color" value="#000000" />
           </div>
           <br />
-          <button class="btn btn-primary" onClick="generateQRCode();">Generate</button>
+          <button class="btn btn-primary" id="generateBtn">Generate</button>
         </div>
         <div class="col-md-6">
           <img id="logo" src="" class="img-fluid" />
