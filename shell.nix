@@ -1,8 +1,10 @@
 # This shell provides a development environment for the vcard-qrcode-generator project.
 # To use it, run 'nix-shell' in the project root.
 
-{ pkgs? import (fetchTarball "https://github.com/nixos/nixpkgs/archive/e040850a7d346e2604a9cbd68208d6818c033334.tar.gz") {}}:
-
+let
+  source = import ./npins;
+  pkgs = import source.nixpkgs {};
+in
 pkgs.mkShell {
   # The build inputs are the packages available in the shell.
   buildInputs = [

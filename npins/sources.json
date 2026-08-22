@@ -1,0 +1,48 @@
+{
+  "pins": {
+    "emacs-overlay": {
+      "type": "Git",
+      "repository": {
+        "type": "Git",
+        "url": "https://github.com/nix-community/emacs-overlay.git"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "63cad05958ad638c0423b922f23db06d6edcc1a8",
+      "url": null,
+      "hash": "sha256-UfD/d+QBbWxNBrDPrbrIZfsqaF+Wwyg71xwCQNoJkx0="
+    },
+    "home-manager": {
+      "type": "Git",
+      "repository": {
+        "type": "Git",
+        "url": "https://github.com/nix-community/home-manager.git"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "ec1a8fdf74ed3f276148ee106299a2ba0e65d51f",
+      "url": null,
+      "hash": "sha256-XL2qfqmocfsvuEGyomZg4nOZfkuSe8vZtrOX99I+b6I="
+    },
+    "nix-darwin": {
+      "type": "Git",
+      "repository": {
+        "type": "Git",
+        "url": "https://github.com/LnL7/nix-darwin.git"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "4cff07de74b50e64bdd68cd4e722ab5b6b35ee48",
+      "url": null,
+      "hash": "sha256-oQFip+v0luP8NIxJzmiW4Wu8bILsbFWom5l0zonl8hQ="
+    },
+    "nixpkgs": {
+      "type": "Channel",
+      "name": "nixpkgs-unstable",
+      "artifact": "nixexprs.tar.xz",
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-26.11pre1058520.391b592eb448/nixexprs.tar.xz",
+      "hash": "sha256-8Ou9WyfCXV3MdC/pQcawzeR8EnxRsPMhLoRDZG1AWik="
+    }
+  },
+  "version": 8
+}
